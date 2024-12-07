@@ -1,5 +1,4 @@
-import 'formik';
-import css from "./SearchBox.module.css"
+import css from "./SearchBox.module.css";
 
 
 function SearchBox({ value, setFilter }) {

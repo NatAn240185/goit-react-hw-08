@@ -1,7 +1,6 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from "yup";
-import css from "./ContactForm.module.css"
-
+import css from "./ContactForm.module.css";
 
 const ProfileValidationSchema = Yup.object().shape({
   username: Yup.string().required("Name is required").min(3, "Name must be at least 3 characters").max(50, "Name can't exceed 50 characters"),

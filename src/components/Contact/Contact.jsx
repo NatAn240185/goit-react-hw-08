@@ -1,4 +1,7 @@
-import './Contact.module.css'
+import { FaUser } from "react-icons/fa6";
+import { FaPhoneAlt } from "react-icons/fa";
+import css from "./Contact.module.css";
+
 
 function Contact({ name, number, deleteContacts, id }) {
     return (
@@ -24,4 +27,3 @@ function Contact({ name, number, deleteContacts, id }) {
 }
 
 export default Contact;
-  
