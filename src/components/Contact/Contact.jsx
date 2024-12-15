@@ -32,5 +32,4 @@ function Contact({ name, number, id }) {
     )
 }
 
-
 export default Contact;
