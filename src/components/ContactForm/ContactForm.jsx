@@ -3,9 +3,7 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import css from './ContactForm.module.css';
 import { useDispatch } from 'react-redux';
-import { nanoid } from '@reduxjs/toolkit';
-import { addContact } from '../../redux/contactsOps';
-
+import { addContact } from '../../redux/contacts/operations';
 
 const ProfileValidationSchema = Yup.object().shape({
   username: Yup.string()
@@ -23,7 +21,7 @@ const ContactForm = () => {
   const dispatch = useDispatch();
 
   const onSubmit = (values, options) => {
-    const newContact = { id: nanoid(), name: values.username, number: values.tel };
+    const newContact = {name: values.username, number: values.tel };
     dispatch(addContact(newContact));
     options.resetForm();
   };
